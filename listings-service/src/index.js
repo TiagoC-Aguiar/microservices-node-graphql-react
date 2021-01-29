@@ -1,3 +1,4 @@
-const path = require('path');
+import '@babel/polyfill';
 
-console.log('listings index working');
+import '#root/db/connection';
+import '#root/server/startServer';
