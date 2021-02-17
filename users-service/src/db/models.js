@@ -45,9 +45,9 @@ UserSession.init(
       },
       type: DataTypes.UUID,      
     },
-    expireAt: {
+    expiresAt: {
       allowNull: false,
-      type: DataTypes.CHAR(64),
+      type: DataTypes.DATE  ,
     },
   }, 
   {
