@@ -22,10 +22,10 @@ services:
       - ./listings-service:/opt/app
 
   listings-service-db:
+    image: mariadb:11.4.2
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=db
-    image: mysql:5.7.20
     ports:
       - 0.0.0.0:7200:3306
 
@@ -42,9 +42,9 @@ services:
       - ./users-service:/opt/app
 
   users-service-db:
+    image: mariadb:11.4.2
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=db
-    image: mysql:5.7.20
     ports:
       - 0.0.0.0:7201:3306
